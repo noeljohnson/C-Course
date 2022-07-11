@@ -48,7 +48,7 @@ int main(void){
         break;
 
       default:
-        puts("Invalid grade entered");
+        printf("Invalid grade entered : %c\n", grade);
         break;
     }
 
