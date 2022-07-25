@@ -46,7 +46,7 @@ int simCarp(int prompt){
   }
 
   int currRoll;
-  while (gameStatus == CONTINUE){
+  while (CONTINUE == gameStatus){
     currRoll = rollDie() + rollDie();
     if (currRoll == 7){
       gameStatus = LOST;
@@ -60,10 +60,10 @@ int simCarp(int prompt){
     }
   }
   if(prompt){
-    puts((gameStatus == WON) ? "YOU WON" : "YOU LOST");
+    puts((WON == gameStatus) ? "YOU WON" : "YOU LOST");
   }
  
-  return (gameStatus ==  WON);
+  return (WON == gameStatus);
 }
 
 int rollDie(){
